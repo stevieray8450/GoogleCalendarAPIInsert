@@ -1,0 +1,9 @@
+﻿UserCredential credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
+                new ClientSecrets
+                {
+                    ClientId = "CLIENTID",
+                    ClientSecret = "CLIENTSECRET",
+                },
+                new[] { CalendarService.Scope.Calendar },
+                "user",
+                CancellationToken.None).Result;
